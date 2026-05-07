@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+class Student
+{
+public:
+
+    string name;
+    int age;
+    int roll;
+
+    Student(string a, int b, int c)
+    {
+        name = a;
+        age = b;
+        roll = c;
+
+        cout << name << endl;
+        cout << age << endl;
+        cout << roll << endl;
+    }
+};
+
+int main()
+{
+    Student obj("firoj", 20, 12);
+
+    return 0;
+}
