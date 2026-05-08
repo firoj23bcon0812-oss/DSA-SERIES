@@ -1,0 +1,31 @@
+ques:code for encapsulation and abstraction in c++?
+ans:
+
+#include <iostream>
+using namespace std;
+class Student 
+{
+    private:
+    //properties
+    string name;
+    int age;
+    int roll;
+    public:
+    void setter(string n, int a,int r)
+    {
+        name=n;
+        age=a;
+        roll=r;
+    }
+    int getter(){
+        return age;
+    }
+};
+int main(){
+    Student obj;
+    obj.setter("firoj",21,812);
+    cout<<obj.getter();
+    
+    return 0;
+    
+}
