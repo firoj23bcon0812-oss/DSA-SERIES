@@ -1,0 +1,31 @@
+ques:code for polymorphism
+ans:
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class Student 
+{
+    private:
+    //properties
+    string name;
+    int age;
+    int roll;
+    public:
+    int area(int l,int r)
+    {
+        return (l*r);
+    }
+    int area(int r)
+    {
+        return(r*r);
+    }
+
+};
+int main(){
+    Student obj;
+    cout<<"area of rec="<<obj.area(2,3)<<endl;
+    cout<<"area of square="<<obj.area(2);
+    
+    return 0;
+    
+}
