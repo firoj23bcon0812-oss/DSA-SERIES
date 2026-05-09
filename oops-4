@@ -1,0 +1,34 @@
+ques:code for single inheritence
+ans:
+
+#include <iostream>
+using namespace std;
+//Inheritence
+class Human
+{
+    //properties
+    protected:
+    string name;
+};
+class Student:public Human{
+    int roll;
+    public:
+    Student(string n,int a){
+        name=n;
+        roll=a;
+        
+    }
+    void display(){
+        cout<<name<<" "<<roll;
+    }
+    
+};
+
+int main() {
+    Student obj("firoj",12);
+    obj.display();
+    
+    
+    
+    return 0;
+}
