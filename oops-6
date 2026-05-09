@@ -1,0 +1,41 @@
+ques:code for multiple inheritence
+ans:
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+//multiple Inheritence
+class Human
+{
+    
+    //properties
+    protected:
+    string name;
+};
+class Person{
+    protected:
+    int age;
+};
+
+class Student:public Person,public Human{
+    int roll;
+    public:
+    Student(string n,int a,int r){
+        name=n;
+        age=a;
+        roll=r;
+        
+    }
+    void display(){
+        cout<<name<<" "<<age<<" "<<roll;
+    }
+    
+};
+
+int main() {
+    Student obj("firoj",12,23);
+    obj.display();
+    
+    
+    
+    return 0;
+}
