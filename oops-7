@@ -1,0 +1,54 @@
+ques:code for hierarchical inheritence
+ques:
+#include <iostream>
+using namespace std;
+
+// Parent class
+class Person {
+protected:
+    string name;
+};
+
+// Child class 1
+class Student : public Person {
+protected:
+    int fees;
+
+public:
+    Student(string n, int f) {
+        name = n;
+        fees = f;
+    }
+
+    void display() {
+        cout << "Student Name: " << name << endl;
+        cout << "Fees: " << fees << endl;
+    }
+};
+
+// Child class 2
+class Teacher : public Person {
+    int salary;
+
+public:
+    Teacher(string n, int s) {
+        name = n;
+        salary = s;
+    }
+
+    void display() {
+        cout << "Teacher Name: " << name << endl;
+        cout << "Salary: " << salary << endl;
+    }
+};
+
+int main() {
+
+    Student obj("firoj", 12000);
+    obj.display();
+
+    Teacher t("Rahul", 50000);
+    t.display();
+
+    return 0;
+}
