@@ -1,0 +1,40 @@
+ques:code for multilevel inheritence
+ans:
+
+#include <iostream>
+using namespace std;
+//multilevel Inheritence
+class Human
+{
+    //properties
+    protected:
+    string name;
+};
+class Person:public Human{
+    protected:
+    int age;
+};
+
+class Student:public Person{
+    int roll;
+    public:
+    Student(string n,int a,int r){
+        name=n;
+        age=a;
+        roll=r;
+        
+    }
+    void display(){
+        cout<<name<<" "<<age<<" "<<roll;
+    }
+    
+};
+
+int main() {
+    Student obj("firoj",12,23);
+    obj.display();
+    
+    
+    
+    return 0;
+}
