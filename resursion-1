@@ -1,0 +1,33 @@
+//factorial
+#include<iostream>
+using namespace std;
+
+class Solution {
+
+    int fact(int n) {
+        if(n == 0)
+            return 1;
+
+        return n * fact(n - 1);
+    }
+
+public:
+
+    int factorial(int n) {
+        return fact(n);
+    }
+};
+
+int main() {
+
+    Solution obj;
+
+    int n;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    cout << "Factorial = " << obj.factorial(n);
+
+    return 0;
+}
